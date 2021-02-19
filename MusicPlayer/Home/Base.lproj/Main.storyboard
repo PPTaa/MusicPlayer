@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ges-aY-nW3">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QK3-r5-94h">
+                                    <size key="itemSize" width="180" height="240"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TrackCollectionViewCell" id="vlx-Lg-W6I" customClass="TrackCollectionViewCell" customModule="MusicPlayer" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="fyh-Mg-4v0">
+                                            <rect key="frame" x="0.0" y="0.0" width="180" height="240"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D7e-mG-tG6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="D7e-mG-tG6" secondAttribute="height" multiplier="1:1" id="kNi-an-jTc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wiF-y4-A2o">
+                                                    <rect key="frame" x="0.0" y="184" width="180" height="22"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artistName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3G-sr-b8Y">
+                                                    <rect key="frame" x="0.0" y="211" width="180" height="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" systemColor="systemGrayColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="D7e-mG-tG6" firstAttribute="top" secondItem="fyh-Mg-4v0" secondAttribute="top" id="0vv-z1-sS9"/>
+                                                <constraint firstAttribute="trailing" secondItem="D7e-mG-tG6" secondAttribute="trailing" id="1GQ-dU-6h8"/>
+                                                <constraint firstItem="D7e-mG-tG6" firstAttribute="leading" secondItem="fyh-Mg-4v0" secondAttribute="leading" id="AAt-HK-UNJ"/>
+                                                <constraint firstItem="wiF-y4-A2o" firstAttribute="leading" secondItem="fyh-Mg-4v0" secondAttribute="leading" id="C4i-0q-VjQ"/>
+                                                <constraint firstItem="d3G-sr-b8Y" firstAttribute="top" secondItem="wiF-y4-A2o" secondAttribute="bottom" constant="5" id="Pj7-mC-JcM"/>
+                                                <constraint firstAttribute="trailing" secondItem="wiF-y4-A2o" secondAttribute="trailing" id="WeQ-ya-mvY"/>
+                                                <constraint firstItem="wiF-y4-A2o" firstAttribute="top" secondItem="D7e-mG-tG6" secondAttribute="bottom" constant="4" id="ciY-8l-wIT"/>
+                                                <constraint firstAttribute="trailing" secondItem="d3G-sr-b8Y" secondAttribute="trailing" id="iJF-AK-l0S"/>
+                                                <constraint firstItem="d3G-sr-b8Y" firstAttribute="leading" secondItem="fyh-Mg-4v0" secondAttribute="leading" id="yfM-WD-HMM"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="trackArtist" destination="d3G-sr-b8Y" id="XTQ-r3-NxI"/>
+                                            <outlet property="trackThumbnail" destination="D7e-mG-tG6" id="MOz-xL-J4P"/>
+                                            <outlet property="trackTitle" destination="wiF-y4-A2o" id="6yI-fE-lhe"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="a0N-Eu-MvH"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="YkH-rj-xqv"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ges-aY-nW3" secondAttribute="bottom" id="DIb-dT-fEO"/>
+                            <constraint firstItem="ges-aY-nW3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I3w-zD-5J1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ges-aY-nW3" secondAttribute="trailing" id="QpE-l2-Et7"/>
+                            <constraint firstItem="ges-aY-nW3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vSU-Eh-qdC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-181" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
