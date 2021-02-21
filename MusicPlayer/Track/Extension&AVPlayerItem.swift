@@ -8,8 +8,10 @@
 import AVFoundation
 import UIKit
 
+// 특적 클래스를 확장할때 익스텐션을 사용하여 제작
 extension AVPlayerItem {
     func convertToTrack() -> Track? {
+        // 곡의 음원의 메타데이터를 가져오는 것
         let metadataList = asset.metadata
         
         var trackTitle: String?
@@ -40,7 +42,7 @@ extension AVPlayerItem {
         return Track(title: title, artist: artist, albumName: albumName, artwork: artwork)
     }
 }
-
+//파일의 메타데이터를 빼와서 변수로 저장하는 익스텐션
 extension AVMetadataItem {
     var title: String? {
         guard let key = commonKey?.rawValue, key == "title" else { return nil }
@@ -61,6 +63,7 @@ extension AVMetadataItem {
 }
 
 extension AVPlayer {
+    // 곡의 재생중 여부에 대한 변수 확장 
     var isPlaying: Bool {
         guard self.currentItem != nil else { return false }
         return self.rate != 0

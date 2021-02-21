@@ -44,7 +44,7 @@ class TrackManager {
     // 인덱스에 맞는 트랙 로드하기
     func track(at index:Int) -> Track? {
         let playerItem = tracks[index]
-        // playerItem > track
+        // playerItem > track (convert)
         let track = playerItem.convertToTrack()
         return track
     }

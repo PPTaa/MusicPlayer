@@ -8,6 +8,9 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    // 트랙 관리 객체 추가
+    let trackManager: TrackManager = TrackManager()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,7 +21,7 @@ class HomeViewController: UIViewController {
 extension HomeViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // 셀 갯수 확인
-        return 10
+        return trackManager.tracks.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -26,6 +29,11 @@ extension HomeViewController: UICollectionViewDataSource{
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TrackCollectionViewCell", for: indexPath) as? TrackCollectionViewCell else {
             return UICollectionViewCell()
         }
+        
+        let item = trackManager.track(at: indexPath.item)
+        
+        cell.updateUI(item: item)
+        
         return cell
     }
 }
