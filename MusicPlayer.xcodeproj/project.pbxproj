@@ -38,6 +38,7 @@
 		7C4D808525DFFFAE00C3737A /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D808425DFFFAE00C3737A /* TrackManager.swift */; };
 		7C4D808925E0000700C3737A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D808825E0000700C3737A /* Track.swift */; };
 		7CA8B3D325DFF6F7003335AE /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA8B3D225DFF6F7003335AE /* TrackCollectionViewCell.swift */; };
+		7CE63C1F25E298CD00C910D4 /* Extension&AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE63C1E25E298CD00C910D4 /* Extension&AVPlayerItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		7C4D808425DFFFAE00C3737A /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
 		7C4D808825E0000700C3737A /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		7CA8B3D225DFF6F7003335AE /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
+		7CE63C1E25E298CD00C910D4 /* Extension&AVPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&AVPlayerItem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			children = (
 				7C4D808425DFFFAE00C3737A /* TrackManager.swift */,
 				7C4D808825E0000700C3737A /* Track.swift */,
+				7CE63C1E25E298CD00C910D4 /* Extension&AVPlayerItem.swift */,
 			);
 			path = Track;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CA8B3D325DFF6F7003335AE /* TrackCollectionViewCell.swift in Sources */,
+				7CE63C1F25E298CD00C910D4 /* Extension&AVPlayerItem.swift in Sources */,
 				7C2538FE25DFF36600E2C8B5 /* HomeViewController.swift in Sources */,
 				7C4D808525DFFFAE00C3737A /* TrackManager.swift in Sources */,
 				7C2538FA25DFF36600E2C8B5 /* AppDelegate.swift in Sources */,
