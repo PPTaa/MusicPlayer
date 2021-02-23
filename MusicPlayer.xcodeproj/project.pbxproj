@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C0706AA25E53F3F00B1EE50 /* TrackCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0706A925E53F3F00B1EE50 /* TrackCollectionHeaderView.swift */; };
 		7C2538FA25DFF36600E2C8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2538F925DFF36600E2C8B5 /* AppDelegate.swift */; };
 		7C2538FC25DFF36600E2C8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2538FB25DFF36600E2C8B5 /* SceneDelegate.swift */; };
 		7C2538FE25DFF36600E2C8B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2538FD25DFF36600E2C8B5 /* HomeViewController.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7C0706A925E53F3F00B1EE50 /* TrackCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionHeaderView.swift; sourceTree = "<group>"; };
 		7C2538F625DFF36600E2C8B5 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2538F925DFF36600E2C8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2538FB25DFF36600E2C8B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				7C2538FD25DFF36600E2C8B5 /* HomeViewController.swift */,
 				7C2538FF25DFF36600E2C8B5 /* Main.storyboard */,
 				7CA8B3D225DFF6F7003335AE /* TrackCollectionViewCell.swift */,
+				7C0706A925E53F3F00B1EE50 /* TrackCollectionHeaderView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				7C2538FA25DFF36600E2C8B5 /* AppDelegate.swift in Sources */,
 				7C2538FC25DFF36600E2C8B5 /* SceneDelegate.swift in Sources */,
 				7C4D808925E0000700C3737A /* Track.swift in Sources */,
+				7C0706AA25E53F3F00B1EE50 /* TrackCollectionHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
