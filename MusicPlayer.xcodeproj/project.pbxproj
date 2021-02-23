@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7C0706AA25E53F3F00B1EE50 /* TrackCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0706A925E53F3F00B1EE50 /* TrackCollectionHeaderView.swift */; };
+		7C0706AE25E5474700B1EE50 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C0706AD25E5474700B1EE50 /* PlayerViewController.swift */; };
+		7C0706B125E5475700B1EE50 /* Player.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C0706B025E5475700B1EE50 /* Player.storyboard */; };
 		7C2538FA25DFF36600E2C8B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2538F925DFF36600E2C8B5 /* AppDelegate.swift */; };
 		7C2538FC25DFF36600E2C8B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2538FB25DFF36600E2C8B5 /* SceneDelegate.swift */; };
 		7C2538FE25DFF36600E2C8B5 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2538FD25DFF36600E2C8B5 /* HomeViewController.swift */; };
@@ -44,6 +46,8 @@
 
 /* Begin PBXFileReference section */
 		7C0706A925E53F3F00B1EE50 /* TrackCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionHeaderView.swift; sourceTree = "<group>"; };
+		7C0706AD25E5474700B1EE50 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		7C0706B025E5475700B1EE50 /* Player.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Player.storyboard; sourceTree = "<group>"; };
 		7C2538F625DFF36600E2C8B5 /* MusicPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C2538F925DFF36600E2C8B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C2538FB25DFF36600E2C8B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7C0706AC25E5473100B1EE50 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				7C0706AD25E5474700B1EE50 /* PlayerViewController.swift */,
+				7C0706B025E5475700B1EE50 /* Player.storyboard */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
 		7C2538ED25DFF36600E2C8B5 = {
 			isa = PBXGroup;
 			children = (
@@ -110,10 +123,11 @@
 		7C2538F825DFF36600E2C8B5 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				7C0706AC25E5473100B1EE50 /* Player */,
+				7CA8B3CF25DFF6C0003335AE /* Home */,
 				7C4D808325DFFF9100C3737A /* Track */,
 				7C2538F925DFF36600E2C8B5 /* AppDelegate.swift */,
 				7C2538FB25DFF36600E2C8B5 /* SceneDelegate.swift */,
-				7CA8B3CF25DFF6C0003335AE /* Home */,
 				7C25390225DFF36700E2C8B5 /* Assets.xcassets */,
 				7C25390425DFF36700E2C8B5 /* LaunchScreen.storyboard */,
 				7C25390725DFF36700E2C8B5 /* Info.plist */,
@@ -234,6 +248,7 @@
 				7C4D807C25DFFC2F00C3737A /* [ asleep ].mp3 in Resources */,
 				7C4D807225DFFC2F00C3737A /* Letting Go.mp3 in Resources */,
 				7C4D807825DFFC2F00C3737A /* Ocean ride __ 海の乗り.mp3 in Resources */,
+				7C0706B125E5475700B1EE50 /* Player.storyboard in Resources */,
 				7C4D806D25DFFC2F00C3737A /* im trying to find myself.mp3 in Resources */,
 				7C4D806E25DFFC2F00C3737A /* when the leaves start falling.mp3 in Resources */,
 				7C4D807425DFFC2F00C3737A /* elijah who - hello.mp3 in Resources */,
@@ -269,6 +284,7 @@
 				7C2538FE25DFF36600E2C8B5 /* HomeViewController.swift in Sources */,
 				7C4D808525DFFFAE00C3737A /* TrackManager.swift in Sources */,
 				7C2538FA25DFF36600E2C8B5 /* AppDelegate.swift in Sources */,
+				7C0706AE25E5474700B1EE50 /* PlayerViewController.swift in Sources */,
 				7C2538FC25DFF36600E2C8B5 /* SceneDelegate.swift in Sources */,
 				7C4D808925E0000700C3737A /* Track.swift in Sources */,
 				7C0706AA25E53F3F00B1EE50 /* TrackCollectionHeaderView.swift in Sources */,
