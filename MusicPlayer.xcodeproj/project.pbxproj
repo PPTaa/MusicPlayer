@@ -41,6 +41,7 @@
 		7C4D808525DFFFAE00C3737A /* TrackManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D808425DFFFAE00C3737A /* TrackManager.swift */; };
 		7C4D808925E0000700C3737A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4D808825E0000700C3737A /* Track.swift */; };
 		7C64661B25E685DE00A76EB2 /* SimplePlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64661A25E685DE00A76EB2 /* SimplePlayer.swift */; };
+		7C64661F25E6977400A76EB2 /* DefaultStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C64661E25E6977400A76EB2 /* DefaultStyle.swift */; };
 		7CA8B3D325DFF6F7003335AE /* TrackCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CA8B3D225DFF6F7003335AE /* TrackCollectionViewCell.swift */; };
 		7CE63C1F25E298CD00C910D4 /* Extension&AVPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE63C1E25E298CD00C910D4 /* Extension&AVPlayerItem.swift */; };
 /* End PBXBuildFile section */
@@ -82,6 +83,7 @@
 		7C4D808425DFFFAE00C3737A /* TrackManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackManager.swift; sourceTree = "<group>"; };
 		7C4D808825E0000700C3737A /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		7C64661A25E685DE00A76EB2 /* SimplePlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimplePlayer.swift; sourceTree = "<group>"; };
+		7C64661E25E6977400A76EB2 /* DefaultStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStyle.swift; sourceTree = "<group>"; };
 		7CA8B3D225DFF6F7003335AE /* TrackCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCollectionViewCell.swift; sourceTree = "<group>"; };
 		7CE63C1E25E298CD00C910D4 /* Extension&AVPlayerItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension&AVPlayerItem.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 		7C2538F825DFF36600E2C8B5 /* MusicPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				7C64661D25E6975F00A76EB2 /* Style */,
 				7C0706AC25E5473100B1EE50 /* Player */,
 				7CA8B3CF25DFF6C0003335AE /* Home */,
 				7C4D808325DFFF9100C3737A /* Track */,
@@ -176,6 +179,14 @@
 				7CE63C1E25E298CD00C910D4 /* Extension&AVPlayerItem.swift */,
 			);
 			path = Track;
+			sourceTree = "<group>";
+		};
+		7C64661D25E6975F00A76EB2 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				7C64661E25E6977400A76EB2 /* DefaultStyle.swift */,
+			);
+			path = Style;
 			sourceTree = "<group>";
 		};
 		7CA8B3CF25DFF6C0003335AE /* Home */ = {
@@ -284,6 +295,7 @@
 			files = (
 				7CA8B3D325DFF6F7003335AE /* TrackCollectionViewCell.swift in Sources */,
 				7CE63C1F25E298CD00C910D4 /* Extension&AVPlayerItem.swift in Sources */,
+				7C64661F25E6977400A76EB2 /* DefaultStyle.swift in Sources */,
 				7C2538FE25DFF36600E2C8B5 /* HomeViewController.swift in Sources */,
 				7C4D808525DFFFAE00C3737A /* TrackManager.swift in Sources */,
 				7C64661B25E685DE00A76EB2 /* SimplePlayer.swift in Sources */,

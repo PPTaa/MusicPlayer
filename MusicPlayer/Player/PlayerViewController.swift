@@ -40,6 +40,7 @@ class PlayerViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         updateTrackInfo()
+        updateTintColor()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -125,4 +126,9 @@ extension PlayerViewController {
         return String(format: "%02d:%02d", min, seconds)
     }
     
+    // 컬러를 다크/라이트 에따라 다르게 설정
+    func updateTintColor(){
+        playControlButton.tintColor = DefaultStyle.Colors.tint
+        timeSlider.tintColor = DefaultStyle.Colors.tint
+    }
 }
