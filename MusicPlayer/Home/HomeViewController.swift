@@ -49,6 +49,11 @@ extension HomeViewController: UICollectionViewDataSource{
             header.tapHandler = { item -> Void in
                 // Player 를 띄운다.
                 print("item title : \(item.convertToTrack()?.title)")
+                let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+                guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
+                playerVC.simplePlayer.replaceCurrentItem(with: item)
+                
+                self.present(playerVC, animated: true, completion: nil)
             }
             
             // 헤더 구성
@@ -58,10 +63,16 @@ extension HomeViewController: UICollectionViewDataSource{
         }
     }
 }
-
+// 클릭시 이벤트
 extension HomeViewController:UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // 클릭시 곡 플레이어 뷰 띄우기
+        let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
+        guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
+        let item = trackManager.tracks[indexPath.item]
+        playerVC.simplePlayer.replaceCurrentItem(with: item)
+        
+        present(playerVC, animated: true, completion: nil)
     }
 }
 

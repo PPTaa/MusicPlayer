@@ -12,7 +12,7 @@
         <!--Player View Controller-->
         <scene sceneID="OfL-p1-SLd">
             <objects>
-                <viewController id="mka-zw-ktf" customClass="PlayerViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PlayerViewController" id="mka-zw-ktf" customClass="PlayerViewController" customModule="MusicPlayer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RCO-6N-sNm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,11 @@
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-oE-Dwq">
                                 <rect key="frame" x="18" y="687" width="378" height="31"/>
+                                <connections>
+                                    <action selector="beginDrag:" destination="mka-zw-ktf" eventType="editingDidBegin" id="9e3-0C-f2c"/>
+                                    <action selector="endDrag:" destination="mka-zw-ktf" eventType="editingDidEnd" id="KnN-qt-wD7"/>
+                                    <action selector="seek:" destination="mka-zw-ktf" eventType="valueChanged" id="Wlt-a4-i5f"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="te8-ed-Aly">
                                 <rect key="frame" x="20" y="727" width="38" height="17"/>
@@ -60,6 +65,9 @@
                                 <state key="normal" image="play.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="60"/>
                                 </state>
+                                <connections>
+                                    <action selector="togglePlayButton:" destination="mka-zw-ktf" eventType="touchUpInside" id="GQ9-B8-LUq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="piW-b8-rVY"/>
@@ -85,6 +93,7 @@
                     <connections>
                         <outlet property="artistLabel" destination="t3K-ER-jUj" id="IVZ-v1-APJ"/>
                         <outlet property="currentTimeLabel" destination="te8-ed-Aly" id="EmC-8p-JW3"/>
+                        <outlet property="playControlButton" destination="SVr-4R-u17" id="Xtd-GM-nwV"/>
                         <outlet property="thumbnailImageView" destination="y4A-F7-vHz" id="SMV-HT-SKy"/>
                         <outlet property="timeSlider" destination="Fg0-oE-Dwq" id="Em2-P2-tfi"/>
                         <outlet property="titleLabel" destination="uJF-R2-icY" id="DbG-sM-DqI"/>
