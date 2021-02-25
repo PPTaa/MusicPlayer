@@ -69,6 +69,25 @@
                                     <action selector="togglePlayButton:" destination="mka-zw-ktf" eventType="touchUpInside" id="GQ9-B8-LUq"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yIs-vv-sxc">
+                                <rect key="frame" x="304.5" y="774" width="45" height="30"/>
+                                <state key="normal" image="forward.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleForwardButton:" destination="mka-zw-ktf" eventType="touchUpInside" id="l70-wN-AEc"/>
+                                    <action selector="togglePlayButton:" destination="mka-zw-ktf" eventType="touchUpInside" id="HqK-Z5-JaL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBf-Uh-NNn">
+                                <rect key="frame" x="64.5" y="774" width="45" height="30"/>
+                                <state key="normal" image="backward.fill" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="30"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleBackwardButton:" destination="mka-zw-ktf" eventType="touchUpInside" id="eTV-3y-PHD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="piW-b8-rVY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -79,20 +98,26 @@
                             <constraint firstItem="y4A-F7-vHz" firstAttribute="top" secondItem="piW-b8-rVY" secondAttribute="top" constant="100" id="Bb9-UC-xco"/>
                             <constraint firstItem="Fg0-oE-Dwq" firstAttribute="leading" secondItem="piW-b8-rVY" secondAttribute="leading" constant="20" id="FVK-s0-gLD"/>
                             <constraint firstItem="HZX-3g-frW" firstAttribute="top" secondItem="Fg0-oE-Dwq" secondAttribute="bottom" constant="10" id="Gs4-LJ-Rtu"/>
+                            <constraint firstItem="SVr-4R-u17" firstAttribute="top" secondItem="yIs-vv-sxc" secondAttribute="bottom" constant="-42" id="JOr-3C-oDd"/>
                             <constraint firstItem="piW-b8-rVY" firstAttribute="bottom" secondItem="SVr-4R-u17" secondAttribute="bottom" constant="45" id="RFh-I3-GeM"/>
                             <constraint firstItem="piW-b8-rVY" firstAttribute="trailing" secondItem="Fg0-oE-Dwq" secondAttribute="trailing" constant="20" id="S76-DY-uOF"/>
                             <constraint firstItem="uJF-R2-icY" firstAttribute="top" secondItem="y4A-F7-vHz" secondAttribute="bottom" constant="69" id="Tfo-nP-niP"/>
                             <constraint firstItem="te8-ed-Aly" firstAttribute="top" secondItem="Fg0-oE-Dwq" secondAttribute="bottom" constant="10" id="YW1-rI-JWD"/>
                             <constraint firstItem="t3K-ER-jUj" firstAttribute="top" secondItem="uJF-R2-icY" secondAttribute="bottom" constant="40" id="bLX-Ts-MOz"/>
                             <constraint firstItem="te8-ed-Aly" firstAttribute="leading" secondItem="Fg0-oE-Dwq" secondAttribute="leading" id="eg9-sU-2fa"/>
+                            <constraint firstItem="SVr-4R-u17" firstAttribute="top" secondItem="XBf-Uh-NNn" secondAttribute="bottom" constant="-42" id="n53-Pp-elB"/>
+                            <constraint firstItem="yIs-vv-sxc" firstAttribute="leading" secondItem="SVr-4R-u17" secondAttribute="trailing" constant="70" id="nWt-Kr-bwP"/>
                             <constraint firstItem="uJF-R2-icY" firstAttribute="centerX" secondItem="y4A-F7-vHz" secondAttribute="centerX" id="p9H-yD-AzJ"/>
                             <constraint firstItem="SVr-4R-u17" firstAttribute="centerX" secondItem="piW-b8-rVY" secondAttribute="centerX" id="uVd-9G-Avv"/>
+                            <constraint firstItem="SVr-4R-u17" firstAttribute="leading" secondItem="XBf-Uh-NNn" secondAttribute="trailing" constant="70" id="whz-Ij-2FD"/>
                             <constraint firstItem="y4A-F7-vHz" firstAttribute="centerX" secondItem="piW-b8-rVY" secondAttribute="centerX" id="yov-A1-myU"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="artistLabel" destination="t3K-ER-jUj" id="IVZ-v1-APJ"/>
+                        <outlet property="backwardControlButton" destination="XBf-Uh-NNn" id="ycB-Aa-m6a"/>
                         <outlet property="currentTimeLabel" destination="te8-ed-Aly" id="EmC-8p-JW3"/>
+                        <outlet property="forwardControlButton" destination="yIs-vv-sxc" id="i1Y-2J-IUH"/>
                         <outlet property="playControlButton" destination="SVr-4R-u17" id="Xtd-GM-nwV"/>
                         <outlet property="thumbnailImageView" destination="y4A-F7-vHz" id="SMV-HT-SKy"/>
                         <outlet property="timeSlider" destination="Fg0-oE-Dwq" id="Em2-P2-tfi"/>
@@ -106,6 +131,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backward.fill" catalog="system" width="128" height="79"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

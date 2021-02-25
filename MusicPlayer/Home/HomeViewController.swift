@@ -37,6 +37,7 @@ extension HomeViewController: UICollectionViewDataSource{
     }
     // 헤더뷰 를 어떻게 표시할까?
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         switch kind {
         case UICollectionView.elementKindSectionHeader:
             // 트랙매니저에서 오늘의 트랙을 가져옴
@@ -44,14 +45,15 @@ extension HomeViewController: UICollectionViewDataSource{
             // 헤더뷰를 가져옴
             guard let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "TrackCollectionHeaderView", for: indexPath) as? TrackCollectionHeaderView else { return UICollectionReusableView() }
             
-            
             header.update(with: item)
             header.tapHandler = { item -> Void in
                 // Player 를 띄운다.
                 print("item title : \(item.convertToTrack()?.title)")
                 let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
                 guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
-                playerVC.simplePlayer.replaceCurrentItem(with: item)
+                
+                guard let index = self.trackManager.todayTrackIndex else { return }
+                playerVC.simplePlayer.replaceCurrentItem(with: item, idx: index)
                 
                 self.present(playerVC, animated: true, completion: nil)
             }
@@ -70,7 +72,8 @@ extension HomeViewController:UICollectionViewDelegate {
         let playerStoryboard = UIStoryboard.init(name: "Player", bundle: nil)
         guard let playerVC = playerStoryboard.instantiateViewController(identifier: "PlayerViewController") as? PlayerViewController else { return }
         let item = trackManager.tracks[indexPath.item]
-        playerVC.simplePlayer.replaceCurrentItem(with: item)
+        
+        playerVC.simplePlayer.replaceCurrentItem(with: item, idx: indexPath.row)
         
         present(playerVC, animated: true, completion: nil)
     }

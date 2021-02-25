@@ -14,6 +14,10 @@ class SimplePlayer {
     
     private let player = AVPlayer()
     
+    private let trackManager:TrackManager = TrackManager()
+    
+    var nowPlayingIdx: Int?
+    
     var currentTime: Double {
         // CurrentTime 구하기
         return player.currentItem?.currentTime().seconds ?? 0
@@ -43,7 +47,7 @@ class SimplePlayer {
         player.pause()
     }
     
-    func play() {
+    func play(at index: Int) {
         // 재생 구현
         player.play()
     }
@@ -51,10 +55,24 @@ class SimplePlayer {
         // 탐색 구현
         player.seek(to: time)
     }
-    func replaceCurrentItem(with item:AVPlayerItem?) {
+    func forward(at idx:Int){
+        // 다음곡 구현
+        self.nowPlayingIdx = idx
+        let item = trackManager.tracks[idx]
+        replaceCurrentItem(with: item, idx: idx)
+    }
+    func backward(at idx:Int){
+        // 이전곡 구현
+        self.nowPlayingIdx = idx
+        let item = trackManager.tracks[idx]
+        replaceCurrentItem(with: item, idx: idx)
+        
+    }
+    func replaceCurrentItem(with item:AVPlayerItem?, idx:Int?) {
         // replaceCurrentItem 구현 들어오는 아이템은 바꿈
         player.replaceCurrentItem(with: item)
-        
+        self.nowPlayingIdx = idx
+        print(self.nowPlayingIdx)
     }
     func addPeriodicTimeObserver(forInterval: CMTime, queue: DispatchQueue?, using: @escaping (CMTime) ->Void) {
         player.addPeriodicTimeObserver(forInterval: forInterval, queue: queue, using: using)

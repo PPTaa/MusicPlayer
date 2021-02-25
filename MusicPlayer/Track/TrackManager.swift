@@ -14,13 +14,20 @@ class TrackManager {
     var tracks: [AVPlayerItem] = []
     var albums: [Album] = []
     var todayTrack: AVPlayerItem?
+    var todayTrackIndex: Int?
     
     // 생성자 정의하기
     init() {
         let tracks = loadTracks()
         self.tracks = tracks
         self.albums = loadAlbums(tracks: tracks)
-        self.todayTrack = self.tracks.randomElement()
+        self.todayTrackIndex = Int.random(in: 0...tracks.count-1)
+        self.todayTrack = todayTrackPick(at: todayTrackIndex)
+    }
+    
+    func todayTrackPick(at index:Int?) -> AVPlayerItem{
+        guard let index = index else { return tracks[0] }
+        return tracks[index]
     }
     
     // 트랙 로드하기

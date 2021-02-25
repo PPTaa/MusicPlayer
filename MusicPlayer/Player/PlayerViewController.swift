@@ -17,7 +17,10 @@ class PlayerViewController: UIViewController {
     @IBOutlet weak var timeSlider: UISlider!
     @IBOutlet weak var currentTimeLabel: UILabel!
     @IBOutlet weak var totalDurationLabel: UILabel!
+    
     @IBOutlet weak var playControlButton: UIButton!
+    @IBOutlet weak var forwardControlButton: UIButton!
+    @IBOutlet weak var backwardControlButton: UIButton!
     
     // SimplePlayer를 만들고 프로퍼티를 추가
     let simplePlayer = SimplePlayer.shared
@@ -46,17 +49,35 @@ class PlayerViewController: UIViewController {
         super.viewWillDisappear(animated)
         // 뷰 나갈때 플레이 중지
         simplePlayer.pause()
-        simplePlayer.replaceCurrentItem(with: nil)
+        simplePlayer.replaceCurrentItem(with: nil, idx: nil)
     }
     @IBAction func togglePlayButton(_ sender: UIButton) {
         //플레이버튼 토글 구현
+        
         if simplePlayer.isPlaying {
             simplePlayer.pause()
         } else {
-            simplePlayer.play()
+            simplePlayer.play(at: simplePlayer.nowPlayingIdx!)
         }
         updatePlayButton()
     }
+    
+    // 다음곡 재생 버튼 구현
+    @IBAction func toggleForwardButton(_ sender: UIButton) {
+        print("click forward", simplePlayer.nowPlayingIdx!)
+        simplePlayer.forward(at: simplePlayer.nowPlayingIdx!+1)
+        updateTrackInfo()
+        
+    }
+    
+    // 이전곡 재생 버튼 구현
+    @IBAction func toggleBackwardButton(_ sender: UIButton) {
+        print("click backward", simplePlayer.nowPlayingIdx!)
+        simplePlayer.backward(at: simplePlayer.nowPlayingIdx!-1)
+        updateTrackInfo()
+    }
+    
+    
     @IBAction func seek(_ sender: UISlider) {
         // 슬라이더를 통한 탐색 구현
         guard let currentItem = simplePlayer.currentItem else { return }
@@ -130,5 +151,7 @@ extension PlayerViewController {
     func updateTintColor(){
         playControlButton.tintColor = DefaultStyle.Colors.tint
         timeSlider.tintColor = DefaultStyle.Colors.tint
+        forwardControlButton.tintColor = DefaultStyle.Colors.tint
+        backwardControlButton.tintColor = DefaultStyle.Colors.tint
     }
 }
